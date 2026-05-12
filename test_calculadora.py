@@ -49,4 +49,15 @@ def test_divisao_por_zero():
     with pytest.raises(ValueError, match="Não é possível dividir por 0"):
         calc.divisao(10, 0)
 
+def test_raiz_quadrada():
+    # arrange
+    calc = Calculadora()
+    # act e assert
+    assert calc.raiz_quadrada(9) == 3.0
+    assert calc.raiz_quadrada(0) == 0.0
+    assert round(calc.raiz_quadrada(2), 4) == 1.4142
+    # esperando ValueError
+    with pytest.raises(ValueError):
+        calc.raiz_quadrada(-1)
+
 ### doc: https://docs.pytest.org/en/7.1.x/how-to/assert.html
