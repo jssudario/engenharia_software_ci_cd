@@ -13,6 +13,10 @@ class Calculadora:
         if b == 0:
             raise ValueError("Não é possível dividir por 0") 
         return a / b
+    
+    def exponencia(self, a, b):
+        """Realiza a exponenciação de um número por outro"""
+        return a ** b
 
     def raiz_quadrada(self, a):
         if a < 0:
