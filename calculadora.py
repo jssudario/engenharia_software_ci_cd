@@ -13,5 +13,9 @@ class Calculadora:
         if b == 0:
             raise ValueError("Não é possível dividir por 0") 
         return a / b
+    
+    def exponencia(self, a, b):
+        """Realiza a exponenciação de um número por outro"""
+        return a ** b
 
 ### doc: https://docs.pytest.org/en/7.1.x/how-to/assert.html
