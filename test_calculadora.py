@@ -49,6 +49,12 @@ def test_divisao_por_zero():
     with pytest.raises(ValueError, match="Não é possível dividir por 0"):
         calc.divisao(10, 0)
 
+def test_exponenciacao():
+    calc = Calculadora()
+    assert calc.exponencia(2, 3) == 8
+    assert calc.exponencia(5, 0) == 1
+    assert calc.exponencia(3, 4) == 81
+    
 def test_raiz_quadrada():
     # arrange
     calc = Calculadora()
