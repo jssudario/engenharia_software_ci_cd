@@ -54,5 +54,16 @@ def test_exponenciacao():
     assert calc.exponencia(2, 3) == 8
     assert calc.exponencia(5, 0) == 1
     assert calc.exponencia(3, 4) == 81
+    
+def test_raiz_quadrada():
+    # arrange
+    calc = Calculadora()
+    # act e assert
+    assert calc.raiz_quadrada(9) == 3.0
+    assert calc.raiz_quadrada(0) == 0.0
+    assert round(calc.raiz_quadrada(2), 4) == 1.4142
+    # esperando ValueError
+    with pytest.raises(ValueError):
+        calc.raiz_quadrada(-1)
 
 ### doc: https://docs.pytest.org/en/7.1.x/how-to/assert.html

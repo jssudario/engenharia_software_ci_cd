@@ -18,4 +18,9 @@ class Calculadora:
         """Realiza a exponenciação de um número por outro"""
         return a ** b
 
+    def raiz_quadrada(self, a):
+        if a < 0:
+            raise ValueError("Não é possível calcular raiz quadrada de número negativo")
+        return a ** 0.5
+
 ### doc: https://docs.pytest.org/en/7.1.x/how-to/assert.html
